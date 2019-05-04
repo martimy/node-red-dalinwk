@@ -1,0 +1,35 @@
+<script type="text/javascript">
+    RED.nodes.registerType('ruuvi-adapter',{
+        category: 'Dalhousie_INWK',
+        color: '#c08c0c',
+        defaults: {
+            name: {value:""}
+        },
+        inputs:1,
+        outputs:5,
+        icon: "ruuvitag.png",
+        label: function() {
+            return this.name||"ruuvi-adapter";
+        },
+        outputLabels: ["temperature","humidity","pressure","acceleration","battery"],
+    });
+</script>
+
+<script type="text/x-red" data-template-name="ruuvi-adapter">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="ruuvi-adapter">
+    <p>Takes a JSON-formatted string that containes RuuviTag scanned data as input and produces five outputs:</p>
+   <h3>Outputs</h3>
+    <ul>
+      <li>Temperature: Celcius</li>
+      <li>Humidity: RH-%</li>
+      <li>Pressure: Pascal</li>
+      <li>Acceleration: milli-G</li>
+      <li>Battery: mV</li>
+    </ul>
+</script>

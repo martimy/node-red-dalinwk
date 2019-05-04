@@ -1,0 +1,20 @@
+{
+  "name": "node-red-dalinwk",
+  "version": "0.1.0",
+  "description": "Nodes for INWK IoT lab.",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ruuvi",
+    "iot"
+  ],
+  "author": "Maen Artimy",
+  "license": "MIT",
+  "node-red": {
+      "nodes": {
+          "ruuvi-adapter": "node-inwk/ruuvi-adapter.js",
+          "ruuvi-scan": "node-inwk/ruuvi-scan.js"
+      }
+  }
+}
