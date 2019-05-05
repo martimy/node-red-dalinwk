@@ -4,7 +4,8 @@
         color: '#c08c0c',
         defaults: {
             name: {value:""},
-            mac: {value:"", required:true, validate: RED.validators.regex(/^([0-9A-F]{2}[:-]){5}([0-9A-F]{2})$/)}
+            mac: {value:"", required:true, validate: RED.validators.regex(/^([0-9A-F]{2}[:-]){5}([0-9A-F]{2})$/)},
+            timeout: {value:3, required:true, validate: RED.validators.number()}
         },
         inputs:1,
         outputs:1,
@@ -24,8 +25,12 @@
         <label for="node-input-mac"><i class="icon-tag"></i> MAC</label>
         <input type="text" id="node-input-mac" placeholder="MAC address">
     </div>
+    <div class="form-row">
+        <label for="node-input-timeout"><i class="icon-tag"></i> Timeout</label>
+        <input type="text" id="node-input-timeout" placeholder="Timeout">
+    </div>
 </script>
 
 <script type="text/x-red" data-help-name="ruuvi-scan">
-    <p>Scans for RuuviTag and reterive data</p>
+    <p>Scans for RuuviTag and outpuse sensore data in JSON-formatted string.</p>
 </script>
