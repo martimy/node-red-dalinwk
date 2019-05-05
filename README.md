@@ -1,5 +1,5 @@
 # node-red-dalinwk
-This project consists of Node-RED nodes for Dalhousie's INWK IoT lab exerices.
+This project consists of Node-RED nodes for Dalhousie's INWK IoT lab exercises.
 
 ## Ruuvi nodes
 
