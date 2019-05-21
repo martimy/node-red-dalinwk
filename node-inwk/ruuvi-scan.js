@@ -8,7 +8,7 @@ module.exports = function(RED) {
         node.on('input', function(msg) {
 
             const { spawn } = require('child_process');
-            const py = spawn("python", ['/home/pi/node-red-dalinwk/node-inwk/get_tag_data.py', this.mac, this.timeout]);
+            const py = spawn("python3", ['/home/pi/node-red-dalinwk/node-inwk/get_tag_data.py', this.mac, this.timeout]);
 
             //setTimeout(function(){ py.kill()}, this.timeout);
 
